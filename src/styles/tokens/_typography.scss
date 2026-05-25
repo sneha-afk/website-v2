@@ -1,0 +1,6 @@
+// styles/tokens/_typography.scss
+@use "colors" as *;
+
+h1 {
+  color: $neutral-900;
+}
