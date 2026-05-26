@@ -1,0 +1,13 @@
+// styles/base/_root.scss
+
+@use "../tokens/_spacing" as *;
+
+body {
+  padding: $space-5;
+}
+
+main,
+.container {
+  width: 75%;
+  margin-inline: auto;
+}

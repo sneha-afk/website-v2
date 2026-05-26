@@ -1,0 +1,11 @@
+// styles/components/_button.scss
+
+@use "../tokens/colors" as *;
+
+.button {
+  color: $red-base;
+}
+
+.back-link {
+  @extend .button;
+}

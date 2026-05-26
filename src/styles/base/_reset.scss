@@ -1,0 +1,50 @@
+// styles/base/_reset.scss
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+:is(p, h1, h2, h3, h4, h5, h6, blockquote, figure, ul, ol, dl, dd) {
+  margin: 0;
+}
+
+:is(img, svg, video, canvas, iframe) {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+:is(input, button, textarea, select) {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  margin: 0;
+  outline: none;
+}
+
+button,
+[type="button"],
+[type="submit"] {
+  cursor: pointer;
+  appearance: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}

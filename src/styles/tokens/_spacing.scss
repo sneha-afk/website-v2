@@ -1,0 +1,23 @@
+// styles/tokens/_spacing.scss
+
+$breakpoint-mobile: 576px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-wide: 1440px;
+
+$space-0: 0;
+$space-1: 0.125rem; // 2px
+$space-2: 0.25rem; // 4px
+$space-3: 0.5rem; // 8px
+$space-4: 1rem; // 16px
+$space-5: 1.5rem; // 24px
+$space-6: 2rem; // 32px
+$space-7: 2.5rem; // 40px
+$space-8: 3rem; // 48px
+$space-9: 3.5rem; // 56px
+$space-10: 4rem; // 64px
+
+$radius-sm: 0.25rem; // 4px
+$radius-md: 0.5rem; // 8px
+$radius-lg: 1rem; // 16px
+$radius-full: 9999px;
