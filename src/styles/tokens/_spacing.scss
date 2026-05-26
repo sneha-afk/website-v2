@@ -1,5 +1,7 @@
 // styles/tokens/_spacing.scss
 
+$content-max-width: 80ch;
+
 $breakpoint-mobile: 576px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
@@ -21,3 +23,8 @@ $radius-sm: 0.25rem; // 4px
 $radius-md: 0.5rem; // 8px
 $radius-lg: 1rem; // 16px
 $radius-full: 9999px;
+
+$line-height-tight: 1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.6;
+$line-height-loose: 2;

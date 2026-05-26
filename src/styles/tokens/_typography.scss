@@ -6,10 +6,26 @@
 $font-family-sans: "Hanken Grotesk", sans-serif;
 $font-family-mono: "Geist Mono", monospace;
 
+$font-size-2xs: 0.75rem; // 9pt  (~12px)
+$font-size-xs: 0.833rem; // 10pt (~13.3px)
+$font-size-sm: 0.916rem; // 11pt (~14.6px)
+$font-size-base: 1rem; // 12pt (16px)
+$font-size-lg: 1.083rem; // 13pt (~17.3px)
+$font-size-xl: 1.166rem; // 14pt (~18.6px)
+$font-size-2xl: 1.25rem; // 15pt (20px)
+$font-size-3xl: 1.333rem; // 16pt (~21.3px)
+$font-size-4xl: 1.5rem; // 18pt (24px)
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
 body {
-  font-family: $font-family-sans;
+    font-family: $font-family-sans;
 }
 
 :is(code, kbd, samp, pre) {
-  font-family: $font-family-mono;
+    font-family: $font-family-mono;
 }

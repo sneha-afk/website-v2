@@ -1,9 +1,94 @@
 // styles/base/_root.scss
+@use "sass:color";
+@use "../tokens/colors" as *;
+@use "../tokens/spacing" as *;
+@use "../tokens/typography" as *;
 
-@use "../tokens/_spacing" as *;
+:root {
+  // Brand
+  --brand-primary: #{$red-base};
+  --brand-secondary: #{$orange-base};
+  --brand-accent: #{$yellow-base};
+
+  // Surface
+  --surface-base: #{$neutral-200};
+  --surface-raised: #{$neutral-100};
+  --surface-overlay: #{rgba($neutral-50, 0.98)};
+  --surface-subtle: #{$neutral-300};
+  --surface-inverse: #{$neutral-900};
+  --surface-scrim: #{rgba($neutral-950, 0.5)};
+
+  // Text
+  --text-primary: #{$neutral-950};
+  --text-secondary: #{$neutral-700};
+  --text-tertiary: #{$neutral-600};
+  --text-inverse: #{$neutral-50};
+  --text-disabled: #{$neutral-400};
+
+  // Border
+  --border-subtle: #{rgba($neutral-400, 0.2)};
+  --border-default: #{$neutral-400};
+  --border-strong: #{$neutral-600};
+
+  // State
+  --state-success: #{$green-base};
+  --state-warning: #{$orange-base};
+  --state-error: #{$red-base};
+  --state-info: #{$blue-base};
+
+  // Interactive
+  --interactive-default: var(--brand-primary);
+  --interactive-hover-bg: var(--surface-subtle);
+  --interactive-hover-text: var(--brand-accent);
+  --interactive-active: #{$red-dark};
+  --interactive-focus: #{rgba($red-base, 0.35)};
+  --interactive-disabled: #{$neutral-400};
+}
+
+@mixin dark-theme {
+  // Surface
+  --surface-base: #{$neutral-950};
+  --surface-raised: #{$neutral-900};
+  --surface-overlay: #{rgba($neutral-950, 0.96)};
+  --surface-subtle: #{$neutral-850};
+  --surface-inverse: #{$neutral-100};
+  --surface-scrim: #{rgba($neutral-950, 0.75)};
+
+  // Text
+  --text-primary: #{$neutral-100};
+  --text-secondary: #{$neutral-400};
+  --text-tertiary: #{$neutral-500};
+  --text-inverse: #{$neutral-950};
+  --text-disabled: #{$neutral-600};
+
+  // Border
+  --border-subtle: #{rgba($neutral-600, 0.2)};
+  --border-default: #{$neutral-750};
+  --border-strong: #{$neutral-500};
+
+  // Interactive
+  --interactive-hover-text: #{$red-light};
+  --interactive-focus: #{rgba($red-base, 0.4)};
+}
+
+:root.dark {
+  @include dark-theme;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light):not(.dark) {
+    @include dark-theme;
+  }
+}
 
 body {
   padding: $space-5;
+  margin: 0;
+  font-family: $font-family-sans;
+  font-size: $font-size-base;
+  line-height: $line-height-relaxed;
+  color: var(--text-primary);
+  background-color: var(--surface-base);
 }
 
 main,

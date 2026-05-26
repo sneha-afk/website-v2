@@ -11,6 +11,13 @@ export function Home() {
       <br />
       <br />
       <ButtonLink href="google.com">"here's a button"</ButtonLink>
+      <ButtonLink href="google.com" variant="secondary">
+        "here's a secondary button"
+      </ButtonLink>
+      <ButtonLink href="google.com" variant="disabled">
+        "here's a disabled button"
+      </ButtonLink>
+      <br />
     </>
   );
 }

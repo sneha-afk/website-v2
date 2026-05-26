@@ -1,46 +1,45 @@
 // styles/tokens/_colors.scss
 @use "sass:color";
 
-$neutral-50: #f7f7f8;
-$neutral-100: #efeff1;
-$neutral-200: #e4e4e7;
-$neutral-300: #d4d4d8;
-$neutral-400: #a1a1aa;
-$neutral-500: #71717a;
-$neutral-600: #52525b;
-$neutral-700: #3f3f46;
+$neutral-50: #f6f7f9;
+$neutral-100: #edeef2;
+$neutral-200: #e2e3e9;
+$neutral-300: #d1d2da;
+$neutral-400: #9e9faa;
+$neutral-500: #6e6f7a;
+$neutral-600: #505160;
+$neutral-700: #3c3d4a;
+$neutral-750: #323340;
+$neutral-800: #282934;
+$neutral-850: #20212b;
+$neutral-900: #161720;
+$neutral-950: #0f1018;
 
-$neutral-750: #35353c;
-$neutral-800: #2a2a31;
-$neutral-850: #222229;
-$neutral-900: #18181b;
-$neutral-950: #111113;
-
-$red-base: #c67676;
+$red-base: #c47272;
 $red-light: color.adjust($red-base, $lightness: 15%);
 $red-dark: color.adjust($red-base, $lightness: -18%);
 
-$orange-base: #c89b6f;
+$orange-base: #c4956a;
 $orange-light: color.adjust($orange-base, $lightness: 15%);
 $orange-dark: color.adjust($orange-base, $lightness: -18%);
 
-$yellow-base: #d8c777;
+$yellow-base: #cfc06a;
 $yellow-light: color.adjust($yellow-base, $lightness: 15%);
 $yellow-dark: color.adjust($yellow-base, $lightness: -18%);
 
-$green-base: #97b690;
+$green-base: #8cb585;
 $green-light: color.adjust($green-base, $lightness: 15%);
 $green-dark: color.adjust($green-base, $lightness: -18%);
 
-$cyan-base: #86b6b0;
+$cyan-base: #7ab0aa;
 $cyan-light: color.adjust($cyan-base, $lightness: 15%);
 $cyan-dark: color.adjust($cyan-base, $lightness: -18%);
 
-$blue-base: #8aa3c4;
+$blue-base: #7d9dc0;
 $blue-light: color.adjust($blue-base, $lightness: 15%);
 $blue-dark: color.adjust($blue-base, $lightness: -18%);
 
-$magenta-base: #b594ad;
+$magenta-base: #b08ba8;
 $magenta-light: color.adjust($magenta-base, $lightness: 15%);
 $magenta-dark: color.adjust($magenta-base, $lightness: -18%);
 

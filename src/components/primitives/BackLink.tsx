@@ -11,7 +11,7 @@ export function BackLink() {
         e.preventDefault();
         navigate(-1);
       }}
-      className="back-link"
+      className="btn"
     >
       /back
     </a>
