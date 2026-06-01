@@ -5,130 +5,130 @@
 @use "./timing" as *;
 
 @mixin respond-to($breakpoint) {
-    @if $breakpoint == mobile {
-        @media (max-width: $breakpoint-mobile) {
-            @content;
-        }
-    } @else if $breakpoint == tablet {
-        @media (max-width: $breakpoint-tablet) {
-            @content;
-        }
-    } @else if $breakpoint == desktop {
-        @media (min-width: $breakpoint-desktop) {
-            @content;
-        }
-    } @else if $breakpoint == wide {
-        @media (min-width: $breakpoint-wide) {
-            @content;
-        }
+  @if $breakpoint == mobile {
+    @media (max-width: $breakpoint-mobile) {
+      @content;
     }
+  } @else if $breakpoint == tablet {
+    @media (max-width: $breakpoint-tablet) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  } @else if $breakpoint == wide {
+    @media (min-width: $breakpoint-wide) {
+      @content;
+    }
+  }
 }
 
 @mixin surface-base(
-    $shadow: none,
-    $bg: var(--surface-raised),
-    $text: var(--text-primary),
-    $border: rgba(255, 255, 255, 0.1),
-    $top-edge: rgba(255, 255, 255, 0.15)
+  $shadow: none,
+  $bg: var(--surface-raised),
+  $text: var(--text-primary),
+  $border: rgba(255, 255, 255, 0.1),
+  $top-edge: rgba(255, 255, 255, 0.15)
 ) {
-    background: $bg;
-    color: $text;
-    border: 1px solid $border;
-    box-shadow:
-        $shadow,
-        inset 0 1px 0 $top-edge;
+  background: $bg;
+  color: $text;
+  border: 1px solid $border;
+  box-shadow:
+    $shadow,
+    inset 0 1px 0 $top-edge;
 }
 
 @mixin surface-hover(
-    $shadow-hover: none,
-    $hover-bg: var(--interactive-hover-bg),
-    $hover-text: var(--interactive-hover-text),
-    $border-hover: rgba(255, 255, 255, 0.25),
-    $top-edge-hover: rgba(255, 255, 255, 0.35)
+  $shadow-hover: none,
+  $hover-bg: var(--interactive-hover-bg),
+  $hover-text: var(--interactive-hover-text),
+  $border-hover: rgba(255, 255, 255, 0.25),
+  $top-edge-hover: rgba(255, 255, 255, 0.35)
 ) {
-    background: $hover-bg;
-    color: $hover-text;
-    border-color: $border-hover;
-    box-shadow:
-        $shadow-hover,
-        inset 0 1px 0 $top-edge-hover;
+  background: $hover-bg;
+  color: $hover-text;
+  border-color: $border-hover;
+  box-shadow:
+    $shadow-hover,
+    inset 0 1px 0 $top-edge-hover;
 }
 
 @mixin surface-interactive(
-    $shadow: none,
-    $shadow-hover: none,
-    $bg: var(--surface-raised),
-    $text: var(--text-primary),
-    $hover-bg: var(--interactive-hover-bg),
-    $hover-text: var(--interactive-hover-text),
-    $border: rgba(255, 255, 255, 0.1),
-    $border-hover: rgba(255, 255, 255, 0.25),
-    $top-edge: rgba(255, 255, 255, 0.15),
-    $top-edge-hover: rgba(255, 255, 255, 0.35),
-    $lift: -1px
+  $shadow: none,
+  $shadow-hover: none,
+  $bg: var(--surface-raised),
+  $text: var(--text-primary),
+  $hover-bg: var(--interactive-hover-bg),
+  $hover-text: var(--interactive-hover-text),
+  $border: rgba(255, 255, 255, 0.1),
+  $border-hover: rgba(255, 255, 255, 0.25),
+  $top-edge: rgba(255, 255, 255, 0.15),
+  $top-edge-hover: rgba(255, 255, 255, 0.35),
+  $lift: -1px
 ) {
-    @include surface-base($shadow, $bg, $text, $border, $top-edge);
-    transition:
-        transform $transition-fast,
-        box-shadow $transition-fast,
-        border-color $transition-fast,
-        background $transition-fast,
-        color $transition-fast;
+  @include surface-base($shadow, $bg, $text, $border, $top-edge);
+  transition:
+    transform $transition-fast,
+    box-shadow $transition-fast,
+    border-color $transition-fast,
+    background $transition-fast,
+    color $transition-fast;
 
-    &:hover {
-        transform: translateY($lift);
-        @include surface-hover(
-            $shadow-hover,
-            $hover-bg,
-            $hover-text,
-            $border-hover,
-            $top-edge-hover
-        );
-    }
+  &:hover {
+    transform: translateY($lift);
+    @include surface-hover(
+      $shadow-hover,
+      $hover-bg,
+      $hover-text,
+      $border-hover,
+      $top-edge-hover
+    );
+  }
 
-    &:active {
-        transform: translateY(0);
-        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
-    }
+  &:active {
+    transform: translateY(0);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.15);
+  }
 
-    &:focus-visible {
-        outline: 2px solid var(--interactive-focus);
-        outline-offset: 2px;
-    }
+  &:focus-visible {
+    outline: 2px solid var(--interactive-focus);
+    outline-offset: 2px;
+  }
 }
 
 @mixin pill(
-    $bg: var(--surface-raised),
-    $text: var(--text-primary),
-    $hover-bg: var(--interactive-hover-bg),
-    $hover-text: var(--interactive-hover-text),
-    $border: rgba(255, 255, 255, 0.1),
-    $border-hover: rgba(255, 255, 255, 0.25),
-    $top-edge: rgba(255, 255, 255, 0.15),
-    $top-edge-hover: rgba(255, 255, 255, 0.35)
+  $bg: var(--surface-raised),
+  $text: var(--text-primary),
+  $hover-bg: var(--interactive-hover-bg),
+  $hover-text: var(--interactive-hover-text),
+  $border: rgba(255, 255, 255, 0.1),
+  $border-hover: rgba(255, 255, 255, 0.25),
+  $top-edge: rgba(255, 255, 255, 0.15),
+  $top-edge-hover: rgba(255, 255, 255, 0.35)
 ) {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: $space-2;
-    padding: $space-2 $space-4;
-    border-radius: $radius-full;
-    font-family: $font-family-sans;
-    font-size: $font-size-sm;
-    font-weight: $font-weight-semibold;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-    cursor: pointer;
-    white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  padding: $space-2 $space-4;
+  border-radius: $radius-full;
+  font-family: $font-family-sans;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
 
-    @include surface-interactive(
-        $bg: $bg,
-        $text: $text,
-        $hover-bg: $hover-bg,
-        $hover-text: $hover-text,
-        $border: $border,
-        $border-hover: $border-hover,
-        $top-edge: $top-edge,
-        $top-edge-hover: $top-edge-hover
-    );
+  @include surface-interactive(
+    $bg: $bg,
+    $text: $text,
+    $hover-bg: $hover-bg,
+    $hover-text: $hover-text,
+    $border: $border,
+    $border-hover: $border-hover,
+    $top-edge: $top-edge,
+    $top-edge-hover: $top-edge-hover
+  );
 }

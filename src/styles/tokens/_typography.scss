@@ -1,5 +1,7 @@
 // styles/tokens/_typography.scss
 
+@use "spacing" as *;
+
 @import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
 
@@ -22,10 +24,51 @@ $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
-body {
-    font-family: $font-family-sans;
+$line-height-base: 1.5;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-mono;
+  font-weight: $font-weight-bold;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: $font-size-3xl;
+}
+h2 {
+  font-size: $font-size-2xl;
+}
+h3 {
+  font-size: $font-size-xl;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: var(--interactive-default);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--interactive-hover-text);
+  }
 }
 
 :is(code, kbd, samp, pre) {
-    font-family: $font-family-mono;
+  font-family: $font-family-mono;
+}
+
+code {
+  font-family: $font-family-mono;
+  font-size: $font-size-sm;
+  background-color: var(--surface-subtle);
+  padding-inline: $space-1;
+  border-radius: 4px;
 }

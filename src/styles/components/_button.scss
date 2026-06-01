@@ -6,66 +6,88 @@
 @use "../tokens/typography" as *;
 
 .btn {
-    @include pill(
-        $bg: #{rgba($red-base, 0.9)},
-        $text: var(--text-inverse),
-        $hover-bg: #{rgba($red-base, 0.9)},
-        $hover-text: var(--text-inverse),
-        $border: #{rgba($red-light, 0.3)},
-        $border-hover: #{rgba($red-light, 0.65)},
-        $top-edge: #{rgba($red-light, 0.4)},
-        $top-edge-hover: #{rgba($red-light, 0.75)}
-    );
+  @include pill(
+    $bg: #{rgba($red-base, 0.9)},
+    $text: var(--text-inverse),
+    $hover-bg: #{rgba($red-base, 0.9)},
+    $hover-text: var(--text-inverse),
+    $border: #{rgba($red-light, 0.3)},
+    $border-hover: #{rgba($red-light, 0.65)},
+    $top-edge: #{rgba($red-light, 0.4)},
+    $top-edge-hover: #{rgba($red-light, 0.75)}
+  );
 }
 
 .btn-secondary {
-    @include pill(
-        $bg: var(--surface-raised),
-        $text: var(--text-primary),
-        $hover-bg: var(--surface-raised),
-        $hover-text: var(--brand-primary),
-        $border: var(--border-subtle),
-        $border-hover: var(--border-default),
-        $top-edge: #{rgba($neutral-50, 0.06)},
-        $top-edge-hover: #{rgba($neutral-50, 0.12)}
-    );
+  @include pill(
+    $bg: var(--surface-raised),
+    $text: var(--text-primary),
+    $hover-bg: var(--surface-raised),
+    $hover-text: var(--brand-primary),
+    $border: var(--border-subtle),
+    $border-hover: var(--border-default),
+    $top-edge: #{rgba($neutral-50, 0.06)},
+    $top-edge-hover: #{rgba($neutral-50, 0.12)}
+  );
 }
 
 .btn-ghost {
-    @include pill(
-        $bg: transparent,
-        $text: var(--text-secondary),
-        $hover-bg: transparent,
-        $hover-text: var(--text-primary),
-        $border-hover: var(--border-subtle),
-        $top-edge: transparent,
-        $top-edge-hover: #{rgba($neutral-50, 0.08)}
-    );
+  @include pill(
+    $bg: transparent,
+    $text: var(--text-secondary),
+    $hover-bg: transparent,
+    $hover-text: var(--text-primary),
+    $border-hover: var(--border-subtle),
+    $top-edge: transparent,
+    $top-edge-hover: #{rgba($neutral-50, 0.08)}
+  );
 }
 
 .btn-outline {
-    @include pill(
-        $bg: transparent,
-        $text: var(--brand-primary),
-        $hover-bg: transparent,
-        $hover-text: var(--brand-accent),
-        $border: #{rgba($red-base, 0.4)},
-        $border-hover: #{rgba($red-light, 0.75)},
-        $top-edge: #{rgba($red-light, 0.15)},
-        $top-edge-hover: #{rgba($red-light, 0.4)}
-    );
+  @include pill(
+    $bg: transparent,
+    $text: var(--brand-primary),
+    $hover-bg: transparent,
+    $hover-text: var(--brand-accent),
+    $border: #{rgba($red-base, 0.4)},
+    $border-hover: #{rgba($red-light, 0.75)},
+    $top-edge: #{rgba($red-light, 0.15)},
+    $top-edge-hover: #{rgba($red-light, 0.4)}
+  );
 }
 
 .btn-disabled {
-    @extend .btn-ghost;
+  @extend .btn-ghost;
+}
+
+.btn-navigation {
+  @include pill(
+    $bg: transparent,
+    $text: var(--text-secondary),
+    $hover-bg: var(--surface-subtle),
+    $hover-text: var(--text-primary),
+    $border: transparent,
+    $border-hover: var(--border-subtle),
+    $top-edge: transparent,
+    $top-edge-hover: #{rgba($neutral-50, 0.06)}
+  );
+
+  font-family: $font-family-mono;
+  font-size: $font-size-xs;
+
+  &.active {
+    color: var(--brand-primary);
+    border-color: #{rgba($red-base, 0.3)};
+  }
 }
 
 .btn[aria-disabled="true"],
 .btn-secondary[aria-disabled="true"],
 .btn-ghost[aria-disabled="true"],
 .btn-outline[aria-disabled="true"],
-.btn-disabled[aria-disabled="true"] {
-    pointer-events: none;
-    opacity: 0.4;
-    cursor: not-allowed;
+.btn-disabled[aria-disabled="true"],
+.btn-navigation[aria-disabled="true"] {
+  pointer-events: none;
+  opacity: 0.4;
+  cursor: not-allowed;
 }

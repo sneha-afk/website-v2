@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-type ButtonVariant = "primary" | "secondary" | "disabled";
+type ButtonVariant = "primary" | "secondary" | "disabled" | "navigation";
 
 interface ButtonLinkProps {
   href: string;
