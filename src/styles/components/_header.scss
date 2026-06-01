@@ -1,0 +1,58 @@
+// styles/components/_header.scss
+
+@use "../tokens/spacing" as *;
+@use "../tokens/typography" as *;
+@use "../base/breakpoints" as *;
+
+.global-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: $space-6;
+  margin-bottom: $space-6;
+  gap: $space-4;
+
+  .site-title {
+    font-size: $font-size-4xl;
+    font-weight: $font-weight-bold;
+    white-space: nowrap;
+    margin: 0;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    gap: $space-3;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: #{$bp-tablet}) {
+    flex-wrap: wrap;
+
+    .navbar {
+      width: 100%;
+      justify-content: flex-start;
+    }
+  }
+
+  @media (max-width: #{$bp-mobile}) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .navbar {
+      width: 100%;
+    }
+  }
+}

@@ -4,6 +4,11 @@
 @use "./typography" as *;
 @use "./timing" as *;
 
+@mixin focus-outline($color: var(--interactive-focus)) {
+  outline: 2px solid $color;
+  outline-offset: 2px;
+}
+
 @mixin respond-to($breakpoint) {
   @if $breakpoint == mobile {
     @media (max-width: $breakpoint-mobile) {

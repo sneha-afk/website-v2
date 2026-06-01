@@ -5,3 +5,7 @@
 @forward "base/reset";
 @forward "base/root";
 @forward "base/shell";
+
+@use "components/button";
+@use "components/header";
+@use "components/elements";

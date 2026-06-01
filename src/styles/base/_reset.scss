@@ -13,10 +13,6 @@ html {
   scroll-behavior: smooth;
 }
 
-:is(p, h1, h2, h3, h4, h5, h6, blockquote, figure, ul, ol, dl, dd) {
-  margin: 0;
-}
-
 :is(img, svg, video, canvas, iframe) {
   display: block;
   max-width: 100%;
@@ -47,4 +43,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }

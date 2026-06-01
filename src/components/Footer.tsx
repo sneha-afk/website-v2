@@ -1,5 +1,3 @@
-import { ButtonLink } from "./primitives/ButtonLink";
-
 interface FooterProps {
   className?: string;
 }
@@ -7,9 +5,7 @@ interface FooterProps {
 export function Footer({ className }: FooterProps) {
   return (
     <footer className={className}>
-      <ul>
-        <ButtonLink href="/" variant="navigation" children={"~/"} />
-      </ul>
+      <ul className="navbar"></ul>
     </footer>
   );
 }

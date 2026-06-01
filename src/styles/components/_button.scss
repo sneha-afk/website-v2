@@ -74,10 +74,24 @@
 
   font-family: $font-family-mono;
   font-size: $font-size-xs;
+}
 
-  &.active {
-    color: var(--brand-primary);
-    border-color: #{rgba($red-base, 0.3)};
+.theme-toggle {
+  @include pill(
+    $bg: transparent,
+    $text: var(--text-secondary),
+    $hover-bg: var(--surface-subtle),
+    $hover-text: var(--text-primary),
+    $border: transparent,
+    $border-hover: var(--border-subtle),
+    $top-edge: transparent,
+    $top-edge-hover: #{rgba($neutral-50, 0.06)}
+  );
+
+  padding: $space-3;
+
+  svg {
+    display: block;
   }
 }
 

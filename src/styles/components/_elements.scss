@@ -1,0 +1,101 @@
+// styles/components/_elements.scss
+
+@use "../tokens/spacing" as *;
+@use "../tokens/timing" as *;
+@use "../tokens/typography" as *;
+@use "../tokens/mixins" as *;
+
+:is(h1, h2, h3, h4, h5, h6) {
+  margin: 0 0 $space-3 0;
+  font-family: $font-family-mono;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+}
+
+h1,
+h2 {
+  color: var(--brand-primary);
+}
+
+h3,
+h4 {
+  color: var(--text-primary);
+}
+
+h5,
+h6 {
+  color: var(--text-secondary);
+}
+
+@each $tag, $size in $heading-sizes {
+  #{$tag} {
+    font-size: $size;
+  }
+}
+
+// Top margins when following non-heading elements
+@each $tag, $margin in $heading-top-margins {
+  *:not(:is(h1, h2, h3, h4, h5, h6)) + #{$tag} {
+    margin-top: $margin;
+  }
+}
+
+p {
+  font-size: $font-size-base;
+  margin-block: $space-4;
+
+  & + & {
+    margin-top: $space-2;
+  }
+}
+
+small {
+  font-size: $font-size-xs;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border-default);
+}
+
+a {
+  color: var(--interactive-default);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  border-radius: $radius-sm;
+
+  transition:
+    color $transition-fast,
+    background-color $transition-fast,
+    text-decoration-color $transition-fast;
+
+  &:hover {
+    color: var(--interactive-hover-text);
+    background-color: var(--interactive-hover-bg);
+    text-decoration-color: transparent;
+
+    :is(code, .inline-code) {
+      background-color: transparent !important;
+      color: inherit !important;
+      box-shadow: none;
+      transition: inherit;
+    }
+  }
+
+  &:focus-visible {
+    @include focus-outline;
+  }
+}
+
+:is(code, kbd, samp, pre) {
+  font-family: $font-family-mono;
+}
+
+code {
+  font-family: $font-family-mono;
+  font-size: $font-size-sm;
+  background-color: var(--surface-subtle);
+
+  padding-inline: $space-1;
+  border-radius: $space-3;
+}

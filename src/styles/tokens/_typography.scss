@@ -1,11 +1,12 @@
 // styles/tokens/_typography.scss
 
 @use "spacing" as *;
+@use "timing" as *;
 
 @import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zalando+Sans:ital,wght@0,200..900;1,200..900&display=swap");
 
-$font-family-sans: "Hanken Grotesk", sans-serif;
+$font-family-sans: "Zalando Sans", sans-serif;
 $font-family-mono: "Geist Mono", monospace;
 
 $font-size-2xs: 0.75rem; // 9pt  (~12px)
@@ -26,49 +27,20 @@ $font-weight-bold: 700;
 
 $line-height-base: 1.5;
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $font-family-mono;
-  font-weight: $font-weight-bold;
-  line-height: 1.5;
-  color: var(--text-primary);
-}
+$heading-sizes: (
+  h1: $font-size-4xl,
+  h2: $font-size-3xl,
+  h3: $font-size-2xl,
+  h4: $font-size-xl,
+  h5: $font-size-lg,
+  h6: $font-size-base,
+);
 
-h1 {
-  font-size: $font-size-3xl;
-}
-h2 {
-  font-size: $font-size-2xl;
-}
-h3 {
-  font-size: $font-size-xl;
-}
-
-p {
-  color: var(--text-secondary);
-}
-
-a {
-  color: var(--interactive-default);
-  text-decoration: none;
-
-  &:hover {
-    color: var(--interactive-hover-text);
-  }
-}
-
-:is(code, kbd, samp, pre) {
-  font-family: $font-family-mono;
-}
-
-code {
-  font-family: $font-family-mono;
-  font-size: $font-size-sm;
-  background-color: var(--surface-subtle);
-  padding-inline: $space-1;
-  border-radius: 4px;
-}
+$heading-top-margins: (
+  h1: $space-7,
+  h2: $space-6,
+  h3: $space-5,
+  h4: $space-4,
+  h5: $space-4,
+  h6: $space-4,
+);

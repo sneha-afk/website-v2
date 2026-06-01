@@ -5,11 +5,12 @@ import { Footer } from "../components/Footer";
 export function Shell() {
   return (
     <div className="shell">
-      <Header className="global-header" />
       <main className="shell-content">
+        <Header className="global-header" />
         <Outlet />
+        <br />
+        <Footer />
       </main>
-      <Footer />
     </div>
   );
 }

@@ -45,9 +45,9 @@ body {
   --state-info: #{$blue-base};
 
   // Interactive
-  --interactive-default: var(--brand-primary);
-  --interactive-hover-bg: var(--surface-subtle);
-  --interactive-hover-text: var(--brand-accent);
+  --interactive-default: #{$red-base};
+  --interactive-hover-bg: #{rgba($red-base, 0.08)};
+  --interactive-hover-text: #{$red-dark};
   --interactive-active: #{$red-dark};
   --interactive-focus: #{rgba($red-base, 0.35)};
   --interactive-disabled: #{$neutral-400};
