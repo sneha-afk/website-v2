@@ -4,6 +4,7 @@
 @use "../tokens/timing" as *;
 @use "../tokens/typography" as *;
 @use "../tokens/mixins" as *;
+@use "../base/breakpoints" as *;
 
 :is(h1, h2, h3, h4, h5, h6) {
   margin: 0 0 $space-3 0;
@@ -98,4 +99,20 @@ code {
 
   padding-inline: $space-1;
   border-radius: $space-3;
+}
+
+.columns {
+  display: flex;
+  align-items: flex-start;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  & > * {
+    flex: 1;
+  }
+
+  @media (max-width: #{$bp-tablet}) {
+    flex-direction: column;
+  }
 }

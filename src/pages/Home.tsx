@@ -24,11 +24,11 @@ export function Home() {
         trying out food in the beautiful Bay Area.
       </p>
 
-      <p>
-        Check out my <a href="/resume">/resume</a> to see my experience, or read
-        my ramblings at my <a href="/blog">/blog</a>, or explore some of my{" "}
-        <a href="/projects">/projects</a>.
-      </p>
+      {/* <p> */}
+      {/*   Check out my <a href="/resume">/resume</a> to see my experience, or read */}
+      {/*   my ramblings at my <a href="/blog">/blog</a>, or explore some of my{" "} */}
+      {/*   <a href="/projects">/projects</a>. */}
+      {/* </p> */}
       <p>Thank you for visiting, have a good one :)</p>
     </>
   );

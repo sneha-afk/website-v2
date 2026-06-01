@@ -1,4 +1,5 @@
 import { ButtonLink } from "../components/primitives/ButtonLink.tsx";
+import { Columns } from "../components/primitives/Columns.tsx";
 import { ThemeToggle } from "../components/ThemeToggle.tsx";
 
 export function KitchenSink() {
@@ -14,13 +15,15 @@ export function KitchenSink() {
         <a href="https://github.com">a link</a>
       </p>
 
-      <div>
-        <p>
-          this theme toggle button's icon won't sync with the global on at the
-          top, thats fine.
-        </p>
-        <ThemeToggle />
-      </div>
+      <Columns
+        left={
+          <p>
+            this theme toggle button's icon won't sync with the global on at the
+            top, thats fine.
+          </p>
+        }
+        right={<ThemeToggle />}
+      />
 
       <ButtonLink href="/">"here's a button"</ButtonLink>
       <ButtonLink href="/" variant="secondary">

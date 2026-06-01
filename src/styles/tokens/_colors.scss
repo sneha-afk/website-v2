@@ -1,19 +1,27 @@
 // styles/tokens/_colors.scss
 @use "sass:color";
 
-$neutral-50: #f6f7f9;
-$neutral-100: #edeef2;
+$neutral-0: #ffffff;
+$neutral-50: #f9f9fb;
+$neutral-100: #f2f3f6;
+$neutral-150: #eaebef;
 $neutral-200: #e2e3e9;
-$neutral-300: #d1d2da;
+$neutral-250: #d8d9e1;
+$neutral-300: #ced0d9;
+$neutral-350: #bdbfc9;
 $neutral-400: #9e9faa;
+$neutral-450: #87888f;
 $neutral-500: #6e6f7a;
+$neutral-550: #5e5f6d;
 $neutral-600: #505160;
+$neutral-650: #444554;
 $neutral-700: #3c3d4a;
 $neutral-750: #323340;
 $neutral-800: #282934;
 $neutral-850: #20212b;
 $neutral-900: #161720;
 $neutral-950: #0f1018;
+$neutral-1000: #080910;
 
 $red-base: #c47272;
 $red-light: color.adjust($red-base, $lightness: 15%);

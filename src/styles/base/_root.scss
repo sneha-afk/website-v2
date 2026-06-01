@@ -19,24 +19,24 @@ body {
   --brand-accent: #{$yellow-base};
 
   // Surface
-  --surface-base: #{$neutral-200};
-  --surface-raised: #{$neutral-100};
-  --surface-overlay: #{rgba($neutral-50, 0.98)};
-  --surface-subtle: #{$neutral-300};
+  --surface-base: #{$neutral-150};
+  --surface-raised: #{$neutral-50};
+  --surface-overlay: #{rgba($neutral-0, 0.98)};
+  --surface-subtle: #{$neutral-250};
   --surface-inverse: #{$neutral-900};
   --surface-scrim: #{rgba($neutral-950, 0.5)};
 
   // Text
   --text-primary: #{$neutral-950};
-  --text-secondary: #{$neutral-700};
-  --text-tertiary: #{$neutral-600};
+  --text-secondary: #{$neutral-600};
+  --text-tertiary: #{$neutral-500};
   --text-inverse: #{$neutral-50};
   --text-disabled: #{$neutral-400};
 
   // Border
-  --border-subtle: #{rgba($neutral-400, 0.2)};
-  --border-default: #{$neutral-400};
-  --border-strong: #{$neutral-600};
+  --border-subtle: #{rgba($neutral-400, 0.25)};
+  --border-default: #{$neutral-350};
+  --border-strong: #{$neutral-500};
 
   // State
   --state-success: #{$green-base};
@@ -46,10 +46,10 @@ body {
 
   // Interactive
   --interactive-default: #{$red-base};
-  --interactive-hover-bg: #{rgba($red-base, 0.08)};
+  --interactive-hover-bg: #{rgba($red-base, 0.06)};
   --interactive-hover-text: #{$red-dark};
   --interactive-active: #{$red-dark};
-  --interactive-focus: #{rgba($red-base, 0.35)};
+  --interactive-focus: #{rgba($red-base, 0.3)};
   --interactive-disabled: #{$neutral-400};
 }
 
@@ -57,26 +57,28 @@ body {
   // Surface
   --surface-base: #{$neutral-950};
   --surface-raised: #{$neutral-900};
-  --surface-overlay: #{rgba($neutral-950, 0.96)};
+  --surface-overlay: #{rgba($neutral-1000, 0.96)};
   --surface-subtle: #{$neutral-850};
-  --surface-inverse: #{$neutral-100};
-  --surface-scrim: #{rgba($neutral-950, 0.75)};
+  --surface-inverse: #{$neutral-150};
+  --surface-scrim: #{rgba($neutral-1000, 0.75)};
 
   // Text
   --text-primary: #{$neutral-100};
-  --text-secondary: #{$neutral-400};
-  --text-tertiary: #{$neutral-500};
+  --text-secondary: #{$neutral-500};
+  --text-tertiary: #{$neutral-550};
   --text-inverse: #{$neutral-950};
-  --text-disabled: #{$neutral-600};
+  --text-disabled: #{$neutral-650};
 
   // Border
-  --border-subtle: #{rgba($neutral-600, 0.2)};
-  --border-default: #{$neutral-750};
+  --border-subtle: #{rgba($neutral-600, 0.25)};
+  --border-default: #{$neutral-700};
   --border-strong: #{$neutral-500};
 
   // Interactive
+  --interactive-hover-bg: #{rgba($red-dark, 0.25)};
   --interactive-hover-text: #{$red-light};
-  --interactive-focus: #{rgba($red-base, 0.4)};
+  --interactive-focus: #{rgba($red-base, 0.35)};
+  --interactive-disabled: #{$neutral-650};
 }
 
 :root.dark {
