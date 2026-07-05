@@ -1,6 +1,8 @@
 import { ButtonLink } from "../components/primitives/ButtonLink.tsx";
 import { Columns } from "../components/primitives/Columns.tsx";
+import { Card } from "../components/primitives/Card.tsx";
 import { ThemeToggle } from "../components/ThemeToggle.tsx";
+import { ResumeEntry } from "../components/ResumeEntry.tsx";
 
 export function KitchenSink() {
   return (
@@ -14,6 +16,16 @@ export function KitchenSink() {
       <p>
         <a href="https://github.com">a link</a>
       </p>
+
+      <ul>
+        <li>unordered</li>
+        <li>list</li>
+      </ul>
+
+      <ol>
+        <li>ordered</li>
+        <li>list</li>
+      </ol>
 
       <Columns
         left={
@@ -33,6 +45,25 @@ export function KitchenSink() {
         "here's a disabled button"
       </ButtonLink>
       <br />
+      <br />
+
+      <Card>
+        <ul>
+          <li>bullet points</li>
+          <li>in a card</li>
+        </ul>
+      </Card>
+
+      <ResumeEntry
+        title="job title"
+        employer="employer"
+        date="date"
+        location="location"
+      >
+        <ul className="resume-item-list">
+          <li>job details</li>
+        </ul>
+      </ResumeEntry>
     </>
   );
 }

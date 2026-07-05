@@ -101,6 +101,32 @@ code {
   border-radius: $space-3;
 }
 
+ul {
+  list-style: square;
+}
+
+ol {
+  list-style: decimal;
+}
+
+:is(ul, ol) {
+  padding-left: $space-5;
+  margin-bottom: $space-4;
+
+  li {
+    margin-bottom: $space-2;
+
+    &::marker {
+      color: var(--text-tertiary);
+    }
+  }
+
+  :is(ul, ol) {
+    margin-top: $space-2;
+    margin-bottom: $space-2;
+  }
+}
+
 .columns {
   display: flex;
   align-items: flex-start;

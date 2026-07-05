@@ -6,21 +6,24 @@ interface HeaderProps {
   className?: string;
 }
 
+// [actual href, display]
+const links: [string, string][] = [
+  ["/", "~/"],
+  ["/resume", "/resume"],
+];
+
 export function Header({ className }: HeaderProps) {
   return (
     <header className={className}>
       <h1 className="site-title">Sneha De</h1>
       <ul className="navbar">
-        <li>
-          <ButtonLink href="/" variant="navigation">
-            ~/
-          </ButtonLink>
-        </li>
-        <li>
-          <ButtonLink href="/about" variant="navigation">
-            /about
-          </ButtonLink>
-        </li>
+        {links.map(([href, name]) => (
+          <li key={href}>
+            <ButtonLink href={href} variant="navigation">
+              {name}
+            </ButtonLink>
+          </li>
+        ))}
         <li>
           <ThemeToggle />
         </li>
