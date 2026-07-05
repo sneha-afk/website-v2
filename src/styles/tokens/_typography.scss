@@ -5,8 +5,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
 
-$font-family-sans: "Encode Sans", sans-serif;
+$font-family-sans: "Hanken Grotesk", sans-serif;
 $font-family-mono: "Geist Mono", monospace;
 
 $font-size-2xs: 0.75rem; // 9pt  (~12px)
@@ -28,12 +29,12 @@ $font-weight-bold: 700;
 $line-height-base: 1.5;
 
 $heading-sizes: (
-  h1: $font-size-4xl,
-  h2: $font-size-3xl,
-  h3: $font-size-2xl,
-  h4: $font-size-xl,
-  h5: $font-size-lg,
-  h6: $font-size-base,
+  h1: $font-size-3xl,
+  h2: $font-size-2xl,
+  h3: $font-size-xl,
+  h4: $font-size-lg,
+  h5: $font-size-base,
+  h6: $font-size-sm,
 );
 
 $heading-top-margins: (

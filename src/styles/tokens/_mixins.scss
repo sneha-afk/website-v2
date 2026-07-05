@@ -4,6 +4,13 @@
 @use "./typography" as *;
 @use "./timing" as *;
 
+@mixin cluster($gap: $space-3, $align: center) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+  align-items: $align;
+}
+
 @mixin focus-outline($color: var(--interactive-focus)) {
   outline: 2px solid $color;
   outline-offset: 2px;

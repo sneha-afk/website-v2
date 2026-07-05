@@ -15,7 +15,11 @@ const links: [string, string][] = [
 export function Header({ className }: HeaderProps) {
   return (
     <header className={className}>
-      <h1 className="site-title">Sneha De</h1>
+      <h1 className="site-title">
+        <a href="/" style={{ textDecoration: "none" }}>
+          Sneha De
+        </a>
+      </h1>
       <ul className="navbar">
         {links.map(([href, name]) => (
           <li key={href}>

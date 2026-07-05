@@ -1,0 +1,105 @@
+// styles/components/_resume.scss
+
+@use "../tokens/colors" as *;
+@use "../tokens/mixins" as *;
+@use "../tokens/spacing" as *;
+@use "../tokens/typography" as *;
+@use "card" as *;
+
+.resume {
+  &-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "title     date"
+      "meta      location"
+      "links     links";
+    gap: $space-2 $space-4;
+
+    ul,
+    li {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    &-job-title {
+      grid-area: title;
+      margin: 0;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-bold;
+      color: var(--text-primary);
+    }
+
+    &-employer {
+      grid-area: meta;
+      margin: 0;
+      font-size: $font-size-base;
+      color: var(--text-secondary);
+    }
+
+    &-job-date {
+      grid-area: date;
+      margin: 0;
+      text-align: right;
+      font-size: $font-size-base;
+      color: var(--text-secondary);
+    }
+
+    &-job-location {
+      grid-area: location;
+      margin: 0;
+      text-align: right;
+      font-size: $font-size-sm;
+      color: var(--text-tertiary);
+    }
+
+    .subtitle,
+    &-subtitle,
+    .tech-stack {
+      grid-area: meta;
+      margin: 0;
+      font-size: $font-size-sm;
+      color: var(--text-secondary);
+    }
+
+    .tech-stack {
+      font-size: $font-size-xs;
+      color: var(--text-secondary);
+
+      .tech-items:not(:last-child)::after {
+        content: "•";
+        margin: 0 $space-2;
+      }
+    }
+
+    .project-links {
+      grid-area: links;
+      font-size: $font-size-xs;
+    }
+  }
+}
+
+.resume-skill-list {
+  @include cluster($space-2);
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  .resume-pill {
+    @include pill(
+      $bg: $red-base,
+      $text: var(--text-inverse),
+      $hover-bg: var(--interactive-hover-bg),
+      $hover-text: var(--interactive-hover-text),
+      $border: var(--border-default),
+      $border-hover: var(--border-subtle),
+      $top-edge: #{rgba($red-light, 0.4)},
+      $top-edge-hover: var(--border-subtle)
+    );
+
+    font-weight: $font-weight-medium;
+    font-size: $font-size-xs;
+
+    padding: $space-1 $space-4;
+  }
+}
