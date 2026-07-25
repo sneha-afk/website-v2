@@ -14,6 +14,11 @@ export function KitchenSink() {
       <hr />
 
       <p>
+        The sans serif font is Schibsted Grotesk, and the{" "}
+        <code>monospace font is Geist Mono.</code>
+      </p>
+
+      <p>
         <a href="https://github.com">a link</a>
       </p>
 
@@ -37,13 +42,11 @@ export function KitchenSink() {
         right={<ThemeToggle />}
       />
 
-      <ButtonLink href="/">"here's a button"</ButtonLink>
-      <ButtonLink href="/" variant="secondary">
+      <ButtonLink href=".">"here's a button"</ButtonLink>
+      <ButtonLink href="." variant="secondary">
         "here's a secondary button"
       </ButtonLink>
-      <ButtonLink href="/" variant="disabled">
-        "here's a disabled button"
-      </ButtonLink>
+      <ButtonLink variant="disabled">"here's a disabled button"</ButtonLink>
       <br />
       <br />
 

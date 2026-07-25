@@ -1,53 +1,54 @@
 // styles/tokens/_colors.scss
 @use "sass:color";
 
-$neutral-0: #ffffff;
-$neutral-50: #f9f9fb;
-$neutral-100: #f2f3f6;
-$neutral-150: #eaebef;
-$neutral-200: #e2e3e9;
-$neutral-250: #d8d9e1;
-$neutral-300: #ced0d9;
-$neutral-350: #bdbfc9;
-$neutral-400: #9e9faa;
-$neutral-450: #87888f;
-$neutral-500: #6e6f7a;
-$neutral-550: #5e5f6d;
-$neutral-600: #505160;
-$neutral-650: #444554;
-$neutral-700: #3c3d4a;
-$neutral-750: #323340;
-$neutral-800: #282934;
-$neutral-850: #20212b;
-$neutral-900: #161720;
-$neutral-950: #0f1018;
-$neutral-1000: #080910;
+$neutral-0: #fafbfc;
+$neutral-50: #f4f5f8;
+$neutral-100: #eceef3;
+$neutral-150: #e3e6ec;
+$neutral-200: #d9dde5;
+$neutral-250: #ced3dd;
+$neutral-300: #bcc2ce;
+$neutral-350: #a8afbc;
+$neutral-400: #9199a7;
+$neutral-450: #7c8493;
+$neutral-500: #69717f;
+$neutral-550: #5b6270;
+$neutral-600: #4d5563;
+$neutral-650: #434955;
+$neutral-700: #393f4a;
+$neutral-750: #313640;
+$neutral-800: #292d36;
+$neutral-850: #22252d;
+$neutral-900: #1b1d25;
+$neutral-950: #14161d;
+$neutral-1000: #0d0f15;
 
-$red-base: #c47272;
+$red-base:     #c47272;
+$orange-base:  #c4956a;
+$yellow-base:  #cfc06a;
+$green-base:   #8cb585;
+$cyan-base:    #7ab0aa;
+$blue-base:    #7d9dc0;
+$magenta-base: #b08ba8;
+
 $red-light: color.adjust($red-base, $lightness: 15%);
 $red-dark: color.adjust($red-base, $lightness: -18%);
 
-$orange-base: #c4956a;
 $orange-light: color.adjust($orange-base, $lightness: 15%);
 $orange-dark: color.adjust($orange-base, $lightness: -18%);
 
-$yellow-base: #cfc06a;
 $yellow-light: color.adjust($yellow-base, $lightness: 15%);
 $yellow-dark: color.adjust($yellow-base, $lightness: -18%);
 
-$green-base: #8cb585;
 $green-light: color.adjust($green-base, $lightness: 15%);
 $green-dark: color.adjust($green-base, $lightness: -18%);
 
-$cyan-base: #7ab0aa;
 $cyan-light: color.adjust($cyan-base, $lightness: 15%);
 $cyan-dark: color.adjust($cyan-base, $lightness: -18%);
 
-$blue-base: #7d9dc0;
 $blue-light: color.adjust($blue-base, $lightness: 15%);
 $blue-dark: color.adjust($blue-base, $lightness: -18%);
 
-$magenta-base: #b08ba8;
 $magenta-light: color.adjust($magenta-base, $lightness: 15%);
 $magenta-dark: color.adjust($magenta-base, $lightness: -18%);
 

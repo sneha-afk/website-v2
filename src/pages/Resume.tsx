@@ -83,7 +83,7 @@ export function Resume() {
               Contributed to{" "}
               <a href="https://github.com/microsoft/semantic-kernel">
                 Microsoft’s <i>Semantic Kernel</i>
-              </a>{" "}
+              </a>
               , an open-source multi-language SDK for AI orchestration
             </li>
             <li>

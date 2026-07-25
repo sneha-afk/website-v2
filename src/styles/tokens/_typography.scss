@@ -4,21 +4,20 @@
 @use "timing" as *;
 
 @import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap");
 
-$font-family-sans: "Hanken Grotesk", sans-serif;
+$font-family-sans: "Schibsted Grotesk", sans-serif;
 $font-family-mono: "Geist Mono", monospace;
 
-$font-size-2xs: 0.75rem; // 9pt  (~12px)
-$font-size-xs: 0.833rem; // 10pt (~13.3px)
-$font-size-sm: 0.916rem; // 11pt (~14.6px)
-$font-size-base: 1rem; // 12pt (16px)
-$font-size-lg: 1.083rem; // 13pt (~17.3px)
-$font-size-xl: 1.166rem; // 14pt (~18.6px)
-$font-size-2xl: 1.25rem; // 15pt (20px)
-$font-size-3xl: 1.333rem; // 16pt (~21.3px)
-$font-size-4xl: 1.5rem; // 18pt (24px)
+$font-size-2xs: 0.6875rem; // 11px
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-base: 0.9375rem; // 15px
+$font-size-lg: 1rem; // 16px
+$font-size-xl: 1.125rem; // 18px
+$font-size-2xl: 1.25rem; // 20px
+$font-size-3xl: 1.5rem; // 24px
+$font-size-4xl: 1.75rem; // 28px
 
 $font-weight-light: 300;
 $font-weight-normal: 400;

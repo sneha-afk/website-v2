@@ -2,31 +2,42 @@ import { Link } from "react-router";
 
 type ButtonVariant = "primary" | "secondary" | "disabled" | "navigation";
 
-interface ButtonLinkProps {
-  href: string;
-  external?: boolean;
-  variant?: ButtonVariant;
+interface BaseProps {
   children: React.ReactNode;
 }
 
-export function ButtonLink({
-  href,
-  external = false,
-  variant = "primary",
-  children,
-}: ButtonLinkProps) {
+type ButtonLinkProps =
+  | (BaseProps & {
+      variant: "disabled";
+      href?: never;
+      external?: never;
+    })
+  | (BaseProps & {
+      variant?: Exclude<ButtonVariant, "disabled">;
+      href: string;
+      external?: boolean;
+    });
+
+export function ButtonLink(props: ButtonLinkProps) {
+  if (props.variant === "disabled") {
+    return (
+      <span className="btn-disabled" aria-disabled>
+        {props.children}
+      </span>
+    );
+  }
+
+  const { href, external = false, variant = "primary", children } = props;
+
   const className = variant === "primary" ? "btn" : `btn-${variant}`;
-  const disabled = variant == "disabled";
-  const disabledProps = disabled ? { "aria-disabled": true as const } : {};
 
   if (external) {
     return (
       <a
-        href={disabled ? undefined : href}
+        href={href}
         target="_blank"
         rel="noopener noreferrer"
         className={className}
-        {...disabledProps}
       >
         {children}
       </a>
@@ -34,7 +45,7 @@ export function ButtonLink({
   }
 
   return (
-    <Link to={href} className={className} {...disabledProps}>
+    <Link to={href} className={className}>
       {children}
     </Link>
   );
