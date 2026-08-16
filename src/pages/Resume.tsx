@@ -1,4 +1,3 @@
-import { Card } from "../components/primitives/Card.tsx";
 import { ResumeEntry } from "../components/ResumeEntry.tsx";
 
 const skillsProgrammingLanguages: string[] = [

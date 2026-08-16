@@ -142,3 +142,36 @@ ol {
     flex-direction: column;
   }
 }
+
+.not-found {
+  text-align: center;
+
+  &__emoji {
+    display: inline-block;
+    margin: $space-4;
+    font-size: 3rem;
+    cursor: pointer;
+    user-select: none;
+    animation: float 3s ease-in-out infinite;
+  }
+
+  &__hint {
+    font-size: $font-size-sm;
+    color: gray;
+  }
+
+  &__home {
+    font-size: $font-size-2xl;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+}
